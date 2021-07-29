@@ -20,10 +20,12 @@ class Guru extends CI_Controller
 		if($this->session->userdata('id') != null){
 			$id = $data['guru']['nip'];
 			$nama = $data['guru']['nama'];
+			$email = $data['guru']['email'];
 			$foto = $data['guru']['foto'];
 		}
 		else{
 			$nama = 'default';
+			$email = 'email@mail.com';
 			$id ='0';
 			$foto = 'default.png';
 		}
@@ -32,6 +34,7 @@ class Guru extends CI_Controller
 			redirect('auth');
 		}else{
 			$data['nama'] = $nama;
+			$data['email'] = $email;
 			$data['id'] = $id;
 			$data['foto'] = $foto;
 			$data['judul'] = 'Beranda';
@@ -48,10 +51,12 @@ class Guru extends CI_Controller
 		if($this->session->userdata('id') != null){
 			$id = $data['guru']['nip'];
 			$nama = $data['guru']['nama'];
+			$email = $data['guru']['email'];
 			$foto = $data['guru']['foto'];
 		}
 		else{
 			$nama = 'default';
+			$email = 'email@mail.com';
 			$id ='0';
 			$foto = 'default.png';
 		}
@@ -60,6 +65,7 @@ class Guru extends CI_Controller
 			redirect('auth');
 		}else{
 			$data['nama'] = $nama;
+			$data['email'] = $email;
 			$data['id'] = $id;
 			$data['foto'] = $foto;
 			$data['judul'] = 'Data Kelas';
@@ -77,10 +83,12 @@ class Guru extends CI_Controller
 		if($this->session->userdata('id') != null){
 			$id = $data['guru']['nip'];
 			$nama = $data['guru']['nama'];
+			$email = $data['guru']['email'];
 			$foto = $data['guru']['foto'];
 		}
 		else{
 			$nama = 'default';
+			$email = 'email@mail.com';
 			$id ='0';
 			$foto = 'default.png';
 		}
@@ -89,6 +97,7 @@ class Guru extends CI_Controller
 			redirect('auth');
 		}else{
 			$data['nama'] = $nama;
+			$data['email'] = $email;
 			$data['id'] = $id;
 			$data['foto'] = $foto;
 			$kdjrsn = $this->guru_models->getkdjurusan($jrsn);

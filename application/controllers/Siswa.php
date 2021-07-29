@@ -20,10 +20,12 @@ class Siswa extends CI_Controller
 		if($this->session->userdata('id') != null){
 			$id = $data['siswa']['nis'];
 			$nama = $data['siswa']['nama'];
+			$email = $data['siswa']['email'];
 			$foto = $data['siswa']['foto'];
 		}
 		else{
 			$nama = 'default';
+			$email = 'email@mail.com';
 			$id ='0';
 			$foto = 'default.png';
 		}
@@ -34,6 +36,7 @@ class Siswa extends CI_Controller
 			$data['nama'] = $nama;
 			$data['id'] = $id;
 			$data['foto'] = $foto;
+			$data['email'] = $email;
 			$data['judul'] = 'Beranda';
 			$this->load->view('templates/header',$data);
 			$this->load->view('siswa/sidebar',$data);
@@ -48,10 +51,12 @@ class Siswa extends CI_Controller
 		if($this->session->userdata('id') != null){
 			$id = $data['siswa']['nis'];
 			$nama = $data['siswa']['nama'];
+			$email = $data['siswa']['email'];
 			$foto = $data['siswa']['foto'];
 		}
 		else{
 			$nama = 'default';
+			$email = 'email@mail.com';
 			$id ='0';
 			$foto = 'default.png';
 		}
@@ -62,6 +67,7 @@ class Siswa extends CI_Controller
 			$data['nama'] = $nama;
 			$data['id'] = $id;
 			$data['foto'] = $foto;
+			$data['email'] = $email;
 			$data['judul'] = 'Data Nilai';
 			$data['datanilai'] = $this->siswa_models->getnilai($id);
 			$data['rata2nilai'] = $this->siswa_models->nilairata2($id);
