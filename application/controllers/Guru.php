@@ -103,7 +103,7 @@ class Guru extends CI_Controller
 			$kdjrsn = $this->guru_models->getkdjurusan($jrsn);
 			$pljrn = $this->db->query('select * from tbl_nilai where nip="'.$this->session->userdata('id').'"')->row_array();
 			$data['judul'] = 'Data siswa kelas '.$kls.' '.$kdjrsn['kd_jurusan'].' '.$dtkls;
-			if($this->db->query('select * from tbl_nilai join tbl_siswa on tbl_nilai.nis=tbl_siswa.nis where nip="'.$pljrn['nip'].'" and id_mapel="'.$pljrn['id_mapel'].'" and tbl_siswa.jurusan="'.$jrsn.'" and kelas="'.$kls.'" and detail_kelas="'.$dtkls.'"')->row_array()){
+			if($this->db->query('select * from tbl_nilai join tbl_siswa on tbl_nilai.nis=tbl_siswa.nis where nip="'.$pljrn['nip'].'" and id_mapel="'.$pljrn['id_mapel'].'" and tbl_siswa.jurusan="'.$jrsn.'" and kelas="'.$kls.'" and kls="'.$kls.'" and detail_kelas="'.$dtkls.'"')->row_array()){
 				$data['datasiswa'] = $this->guru_models->getsiswaajar($kls,$jrsn,$dtkls,$pljrn['id_mapel']);
 				$data['nilai'] = 1;
 			}else{
@@ -127,7 +127,7 @@ class Guru extends CI_Controller
 		$detailkelas = $this->input->post('detailkelas',true);
 		$jml = count($nilai);
 		for ($i=0; $i < $jml; $i++) { 
-			if($this->db->query('select * from tbl_nilai where nis="'.$_POST['nis'][$i].'" and nip="'.$pljrn['nip'].'" and id_mapel="'.$pljrn['id_mapel'].'"')->row_array()){
+			if($this->db->query('select * from tbl_nilai where nis="'.$_POST['nis'][$i].'" and nip="'.$pljrn['nip'].'" and kls="'.$kelas.'" and id_mapel="'.$pljrn['id_mapel'].'"')->row_array()){
 				$this->db->query('update tbl_nilai set nilai="'.$_POST['nilai'][$i].'", grade="'.$this->guru_models->grade($_POST['nilai'][$i]).'", keterangan="'.$this->guru_models->keterangan($_POST['nilai'][$i]).'" where nis="'.$_POST['nis'][$i].'" and nip="'.$pljrn['nip'].'"');
 				$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">
 					Berhasil mengubah nilai
@@ -142,6 +142,7 @@ class Guru extends CI_Controller
 					'nis' => $_POST['nis'][$i],
 					'nip' => $pljrn['nip'],
 					'nilai' => $_POST['nilai'][$i],
+					'kls' => $_POST['kls'][$i],
 					'grade' => $this->guru_models->grade($_POST['nilai'][$i]),
 					'keterangan' => $this->guru_models->keterangan($_POST['nilai'][$i])
 				];		

@@ -16,7 +16,7 @@ class guru_models extends CI_Model
 		return $this->db->query('select * from tbl_pelajaran join tbl_jurusan on tbl_pelajaran.jurusan=tbl_jurusan.id_jurusan where nip="'.$id.'"')->result_array();	
 	}
 	public function getsiswaajar($kls,$jrsn,$dk,$nl){
-		return $this->db->query('select *,tbl_siswa.nis from tbl_siswa join tbl_jurusan on tbl_siswa.jurusan=tbl_jurusan.id_jurusan left join tbl_nilai on tbl_siswa.nis=tbl_nilai.nis where jurusan="'.$jrsn.'" and kelas="'.$kls.'" and detail_kelas="'.$dk.'" and tbl_nilai.id_mapel="'.$nl.'" order by nama')->result_array();
+		return $this->db->query('select *,tbl_siswa.nis from tbl_siswa join tbl_jurusan on tbl_siswa.jurusan=tbl_jurusan.id_jurusan left join tbl_nilai on tbl_siswa.nis=tbl_nilai.nis where jurusan="'.$jrsn.'" and kelas="'.$kls.'" and kls="'.$kls.'" and detail_kelas="'.$dk.'" and tbl_nilai.id_mapel="'.$nl.'" order by nama')->result_array();
 	}
 	public function getsiswakelas($kls,$jrsn,$dk)
 	{

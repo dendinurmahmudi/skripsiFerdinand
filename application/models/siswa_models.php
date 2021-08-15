@@ -4,16 +4,16 @@
   */
 class siswa_models extends CI_Model
 {
-	public function getnilai($nis)
+	public function getnilai($nis,$kls)
 	{
-		return $this->db->query('select nama_mapel,nilai,grade,keterangan from tbl_siswa join tbl_nilai on tbl_siswa.nis=tbl_nilai.nis join tbl_mata_pelajaran on tbl_nilai.id_mapel=tbl_mata_pelajaran.id_mapel where tbl_siswa.nis="'.$nis.'"')->result_array();
+		return $this->db->query('select nama_mapel,nilai,grade,keterangan from tbl_siswa join tbl_nilai on tbl_siswa.nis=tbl_nilai.nis join tbl_mata_pelajaran on tbl_nilai.id_mapel=tbl_mata_pelajaran.id_mapel where tbl_siswa.nis="'.$nis.'" and tbl_nilai.kls="'.$kls.'"')->result_array();
 	} 
 	public function getdetkelas($nis){
 		return $this->db->query('select * from tbl_siswa join tbl_jurusan on tbl_siswa.jurusan=tbl_jurusan.id_jurusan where nis="'.$nis.'"')->row_array();
 	}
-	public function nilairata2($nis)
+	public function nilairata2($nis,$kls)
 	{
-		return $this->db->query('select nama_mapel,nilai,grade,keterangan,sum(nilai)/count(nilai) as rata_rata from tbl_siswa join tbl_nilai on tbl_siswa.nis=tbl_nilai.nis join tbl_mata_pelajaran on tbl_nilai.id_mapel=tbl_mata_pelajaran.id_mapel where tbl_siswa.nis="'.$nis.'"')->row_array();
+		return $this->db->query('select nama_mapel,nilai,grade,keterangan,sum(nilai)/count(nilai) as rata_rata from tbl_siswa join tbl_nilai on tbl_siswa.nis=tbl_nilai.nis join tbl_mata_pelajaran on tbl_nilai.id_mapel=tbl_mata_pelajaran.id_mapel where tbl_siswa.nis="'.$nis.'" and tbl_nilai.kls="'.$kls.'"')->row_array();
 	}
 	public function grade($nilai)
 	{

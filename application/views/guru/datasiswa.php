@@ -70,6 +70,7 @@
 									</td>
 								</tr>
 								<input type="hidden" <?= 'name="nis['.$n.']" '?> value="<?= $s['nis'] ?>">
+								<input type="hidden" <?= 'name="kls['.$n.']" '?> value="<?= $s['kelas'] ?>">
 								<input type="hidden" name="kelas" value="<?= $s['kelas'] ?>">
 								<input type="hidden" name="jurusan" value="<?= $s['id_jurusan'] ?>">
 								<input type="hidden" name="detailkelas" value="<?= $s['detail_kelas'] ?>">
