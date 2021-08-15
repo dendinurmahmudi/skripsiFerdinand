@@ -50,8 +50,8 @@
 										<td></td>
 										<td></td>
 										<td><?= $rata210['rata_rata'] ?></td>
-										<td><?= $this->siswa_models->grade($rata210['rata_rata']) ?></td>
-										<td><?= $this->siswa_models->keterangan($rata210['rata_rata']) ?></td>
+										<td><?= $this->admin_models->grade($rata210['rata_rata']) ?></td>
+										<td><?= $this->admin_models->keterangan($rata210['rata_rata']) ?></td>
 									</tr>
 								</table>
 							</div>
@@ -59,7 +59,7 @@
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="c">
 						<?php if ($rata211['rata_rata'] == null) { ?>
-							<h3 class="text-center">Anda belum menempuh kelas 11</h3>
+							<h3 class="text-center">Siswa belum menempuh kelas 11</h3>
 						<?php }else{ ?>
 							<div class="table-responsive">
 								<table class="example23 table table-bordered table-striped" cellspacing="0" width="100%">
@@ -98,8 +98,8 @@
 											<td></td>
 											<td></td>
 											<td><?= $rata211['rata_rata'] ?></td>
-											<td><?= $this->siswa_models->grade( $rata211['rata_rata']) ?></td>
-											<td><?= $this->siswa_models->keterangan($rata211['rata_rata']) ?></td>
+											<td><?= $this->admin_models->grade( $rata211['rata_rata']) ?></td>
+											<td><?= $this->admin_models->keterangan($rata211['rata_rata']) ?></td>
 										</tr>
 									</table>
 								</div>
@@ -107,7 +107,7 @@
 						</div>
 						<div role="tabpanel" class="tab-pane fade" id="d">
 							<?php if ($rata212['rata_rata'] == null) { ?>
-								<h3 class="text-center">Anda belum menempuh kelas 12</h3>
+								<h3 class="text-center">Siswa belum menempuh kelas 12</h3>
 							<?php } else{?>
 								<div class="table-responsive">
 									<table class="example23 table table-bordered table-striped" cellspacing="0" width="100%">
@@ -146,8 +146,8 @@
 												<td></td>
 												<td></td>
 												<td><?= $rata212['rata_rata'] ?></td>
-												<td><?= $this->siswa_models->grade( $rata212['rata_rata']) ?></td>
-												<td><?= $this->siswa_models->keterangan($rata212['rata_rata']) ?></td>
+												<td><?= $this->admin_models->grade( $rata212['rata_rata']) ?></td>
+												<td><?= $this->admin_models->keterangan($rata212['rata_rata']) ?></td>
 											</tr>
 										</table>
 									</div>

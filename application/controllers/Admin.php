@@ -20,10 +20,12 @@ class Admin extends CI_Controller
 		if($this->session->userdata('id') != null){
 			$id = $data['guru']['nip'];
 			$nama = $data['guru']['nama'];
+			$email = $data['guru']['email'];
 			$foto = $data['guru']['foto'];
 		}
 		else{
 			$id = 'default';
+			$email = 'email@mail.com';
 			$no_induk ='0';
 			$foto = 'default.png';
 		}
@@ -32,6 +34,7 @@ class Admin extends CI_Controller
 			redirect('auth');
 		}else{
 			$data['nama'] = $nama;
+			$data['email'] = $email;
 			$data['id'] = $id;
 			$data['foto'] = $foto;
 			$data['judul'] = 'Beranda';
@@ -51,10 +54,12 @@ class Admin extends CI_Controller
 		if($this->session->userdata('id') != null){
 			$id = $data['guru']['nip'];
 			$nama = $data['guru']['nama'];
+			$email = $data['guru']['email'];
 			$foto = $data['guru']['foto'];
 		}
 		else{
 			$id = 'default';
+			$email = 'email@mail.com';
 			$no_induk ='0';
 			$foto = 'default.png';
 		}
@@ -63,6 +68,7 @@ class Admin extends CI_Controller
 			redirect('auth');
 		}else{
 			$data['nama'] = $nama;
+			$data['email'] = $email;
 			$data['id'] = $id;
 			$data['foto'] = $foto;
 			$kdjrsn = $this->admin_models->getkdjurusan($jrsn);
@@ -86,10 +92,12 @@ class Admin extends CI_Controller
 		if($this->session->userdata('id') != null){
 			$id = $data['guru']['nip'];
 			$nama = $data['guru']['nama'];
+			$email = $data['guru']['email'];
 			$foto = $data['guru']['foto'];
 		}
 		else{
 			$id = 'default';
+			$email = 'email@mail.com';
 			$no_induk ='0';
 			$foto = 'default.png';
 		}
@@ -98,6 +106,7 @@ class Admin extends CI_Controller
 			redirect('auth');
 		}else{
 			$data['nama'] = $nama;
+			$data['email'] = $email;
 			$data['id'] = $id;
 			$data['foto'] = $foto;
 			$data['judul'] = 'Data Pegawai';
@@ -116,10 +125,12 @@ class Admin extends CI_Controller
 		if($this->session->userdata('id') != null){
 			$id = $data['guru']['nip'];
 			$nama = $data['guru']['nama'];
+			$email = $data['guru']['email'];
 			$foto = $data['guru']['foto'];
 		}
 		else{
 			$id = 'default';
+			$email = 'email@mail.com';
 			$no_induk ='0';
 			$foto = 'default.png';
 		}
@@ -128,6 +139,7 @@ class Admin extends CI_Controller
 			redirect('auth');
 		}else{
 			$data['nama'] = $nama;
+			$data['email'] = $email;
 			$data['id'] = $id;
 			$data['foto'] = $foto;
 			$data['judul'] = 'Data jurusan';
@@ -252,10 +264,12 @@ class Admin extends CI_Controller
 		if($this->session->userdata('id') != null){
 			$id = $data['guru']['nip'];
 			$nama = $data['guru']['nama'];
+			$email = $data['guru']['email'];
 			$foto = $data['guru']['foto'];
 		}
 		else{
 			$id = 'default';
+			$email = 'email@mail.com';
 			$no_induk ='0';
 			$foto = 'default.png';
 		}
@@ -264,6 +278,7 @@ class Admin extends CI_Controller
 			redirect('auth');
 		}else{
 			$data['nama'] = $nama;
+			$data['email'] = $email;
 			$data['id'] = $id;
 			$data['foto'] = $foto;
 			if ($kls == 13) {
@@ -340,10 +355,12 @@ class Admin extends CI_Controller
 		if($this->session->userdata('id') != null){
 			$id = $data['guru']['nip'];
 			$nama = $data['guru']['nama'];
+			$email = $data['guru']['email'];
 			$foto = $data['guru']['foto'];
 		}
 		else{
 			$id = 'default';
+			$email = 'email@mail.com';
 			$no_induk ='0';
 			$foto = 'default.png';
 		}
@@ -352,6 +369,7 @@ class Admin extends CI_Controller
 			redirect('auth');
 		}else{
 			$data['nama'] = $nama;
+			$data['email'] = $email;
 			$data['id'] = $id;
 			$data['foto'] = $foto;
 			$data['judul'] = 'Kelola Siswa';
@@ -371,10 +389,12 @@ class Admin extends CI_Controller
 		if($this->session->userdata('id') != null){
 			$id = $data['guru']['nip'];
 			$nama = $data['guru']['nama'];
+			$email = $data['guru']['email'];
 			$foto = $data['guru']['foto'];
 		}
 		else{
 			$id = 'default';
+			$email = 'email@mail.com';
 			$no_induk ='0';
 			$foto = 'default.png';
 		}
@@ -383,6 +403,7 @@ class Admin extends CI_Controller
 			redirect('auth');
 		}else{
 			$data['nama'] = $nama;
+			$data['email'] = $email;
 			$data['id'] = $id;
 			$data['foto'] = $foto;
 			$data['judul'] = 'Data Mapel';
@@ -455,10 +476,12 @@ class Admin extends CI_Controller
 		if($this->session->userdata('id') != null){
 			$id = $data['guru']['nip'];
 			$nama = $data['guru']['nama'];
+			$email = $data['guru']['email'];
 			$foto = $data['guru']['foto'];
 		}
 		else{
 			$id = 'default';
+			$email = 'email@mail.com';
 			$no_induk ='0';
 			$foto = 'default.png';
 		}
@@ -467,6 +490,7 @@ class Admin extends CI_Controller
 			redirect('auth');
 		}else{
 			$data['nama'] = $nama;
+			$data['email'] = $email;
 			$data['id'] = $id;
 			$data['foto'] = $foto;
 			$data['jurusankelas'] = $this->admin_models->getkelasjurusan($jrsn,$kls);
@@ -484,10 +508,12 @@ class Admin extends CI_Controller
 		if($this->session->userdata('id') != null){
 			$id = $data['guru']['nip'];
 			$nama = $data['guru']['nama'];
+			$email = $data['guru']['email'];
 			$foto = $data['guru']['foto'];
 		}
 		else{
 			$id = 'default';
+			$email = 'email@mail.com';
 			$no_induk ='0';
 			$foto = 'default.png';
 		}
@@ -496,6 +522,7 @@ class Admin extends CI_Controller
 			redirect('auth');
 		}else{
 			$data['nama'] = $nama;
+			$data['email'] = $email;
 			$data['id'] = $id;
 			$data['foto'] = $foto;
 			$data['judul'] = 'Data lulusan';
@@ -512,10 +539,12 @@ class Admin extends CI_Controller
 		if($this->session->userdata('id') != null){
 			$id = $data['guru']['nip'];
 			$nama = $data['guru']['nama'];
+			$email = $data['guru']['email'];
 			$foto = $data['guru']['foto'];
 		}
 		else{
 			$id = 'default';
+			$email = 'email@mail.com';
 			$no_induk ='0';
 			$foto = 'default.png';
 		}
@@ -524,6 +553,7 @@ class Admin extends CI_Controller
 			redirect('auth');
 		}else{
 			$data['nama'] = $nama;
+			$data['email'] = $email;
 			$data['id'] = $id;
 			$data['foto'] = $foto;
 			$data['jurusanlulus'] = $this->admin_models->getjurusanlulus($thn);
@@ -541,10 +571,12 @@ class Admin extends CI_Controller
 		if($this->session->userdata('id') != null){
 			$id = $data['guru']['nip'];
 			$nama = $data['guru']['nama'];
+			$email = $data['guru']['email'];
 			$foto = $data['guru']['foto'];
 		}
 		else{
 			$id = 'default';
+			$email = 'email@mail.com';
 			$no_induk ='0';
 			$foto = 'default.png';
 		}
@@ -553,6 +585,7 @@ class Admin extends CI_Controller
 			redirect('auth');
 		}else{
 			$data['nama'] = $nama;
+			$data['email'] = $email;
 			$data['id'] = $id;
 			$data['foto'] = $foto;
 			$nama = $this->admin_models->getdetpeg($nip);
@@ -599,6 +632,44 @@ class Admin extends CI_Controller
 			</button>
 			</div');
 		redirect('Admin/datakelasajar/'.$nip);
+	}
+	public function datanilai($nis)
+	{
+		$data['guru'] = $this->db->get_where('tbl_pegawai', ['nip'=>
+			$this->session->userdata('id')])->row_array();
+		if($this->session->userdata('id') != null){
+			$id = $data['guru']['nip'];
+			$nama = $data['guru']['nama'];
+			$email = $data['guru']['email'];
+			$foto = $data['guru']['foto'];
+		}
+		else{
+			$id = 'default';
+			$email = 'email@mail.com';
+			$no_induk ='0';
+			$foto = 'default.png';
+		}
+		if($this->session->userdata('id') == null){
+			$this->session->set_flashdata('pesan','<div class="alert alert-danger" role="alert">Anda harus masuk terlebih dulu!</div');
+			redirect('auth');
+		}else{
+			$data['nama'] = $nama;
+			$data['email'] = $email;
+			$data['id'] = $id;
+			$data['foto'] = $foto;
+			$data['judul'] = 'Data Nilai';
+			$data['nilai10'] = $this->admin_models->getnilai($nis,'10');
+			$data['nilai11'] = $this->admin_models->getnilai($nis,'11');
+			$data['nilai12'] = $this->admin_models->getnilai($nis,'12');
+			$data['rata210'] = $this->admin_models->nilairata2($nis,'10');
+			$data['rata211'] = $this->admin_models->nilairata2($nis,'11');
+			$data['rata212'] = $this->admin_models->nilairata2($nis,'12');
+			$data['kelas'] = $this->admin_models->getdetkelas($nis);
+			$this->load->view('templates/header',$data);
+			$this->load->view('admin/sidebar',$data);
+			$this->load->view('admin/datanilai',$data);
+			$this->load->view('templates/footer',$data);
+		}
 	}
 
 }

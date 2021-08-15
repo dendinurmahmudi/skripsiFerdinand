@@ -31,7 +31,8 @@
 								<td><?= $s['kelas'].' '.$s['kd_jurusan'].' '.$s['detail_kelas'] ?></td>
 								<td class="text-nowrap">
 									<a href="<?= base_url('Admin/hapussiswa/'.$s['nis'].'/'.$s['id_jurusan']) ?>" onclick="return confirm('Yakin hapus data <?= $s['nama'] ?> ?');" title="Hapus"> <i class="fa fa-trash text-inverse fa-fw"></i> </a>
-									<a href="#" data-toggle="modal" title="Edit" data-target="#edit<?= $s['nis'] ?>"> <i class="fa fa-pencil text-inverse"></i> </a>
+									<a href="#" data-toggle="modal" title="Edit" data-target="#edit<?= $s['nis'] ?>"> <i class="fa fa-pencil text-inverse fa-fw"></i> </a>
+									<a href="<?= base_url('Admin/datanilai/'.$s['nis']) ?>" title="Lihat nilai"> <i class="fa fa-eye text-inverse"></i> </a>
 								</td>
 							</tr>
 						<?php } ?>
