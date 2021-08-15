@@ -38,6 +38,9 @@ class Siswa extends CI_Controller
 			$data['foto'] = $foto;
 			$data['email'] = $email;
 			$data['judul'] = 'Beranda';
+			$data['rata210'] = $this->siswa_models->nilairata2($id,'10');
+			$data['rata211'] = $this->siswa_models->nilairata2($id,'11');
+			$data['rata212'] = $this->siswa_models->nilairata2($id,'12');
 			$this->load->view('templates/header',$data);
 			$this->load->view('siswa/sidebar',$data);
 			$this->load->view('siswa/index',$data);

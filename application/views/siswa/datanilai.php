@@ -59,7 +59,7 @@
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="c">
 						<?php if ($rata211['rata_rata'] == null) { ?>
-							<h3 class="text-center">Anda belum menempuh kelas 11</h3>
+							<h3 class="text-center">Nilai belum tersedia</h3>
 						<?php }else{ ?>
 							<div class="table-responsive">
 								<table class="example23 table table-bordered table-striped" cellspacing="0" width="100%">
@@ -107,7 +107,7 @@
 						</div>
 						<div role="tabpanel" class="tab-pane fade" id="d">
 							<?php if ($rata212['rata_rata'] == null) { ?>
-								<h3 class="text-center">Anda belum menempuh kelas 12</h3>
+								<h3 class="text-center">Nilai belum tersedia</h3>
 							<?php } else{?>
 								<div class="table-responsive">
 									<table class="example23 table table-bordered table-striped" cellspacing="0" width="100%">

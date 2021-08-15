@@ -15,6 +15,8 @@
 	<link href="<?= base_url('assets/templates/') ?>plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
 	<link href="<?= base_url('assets/templates/') ?>plugins/bower_components/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
 	<link href="https://cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css" rel="stylesheet" type="text/css" />
+	<!-- moris -->
+	<link href="<?= base_url('assets/templates/') ?>plugins/bower_components/morrisjs/morris.css" rel="stylesheet">
 	<!-- chartist CSS -->
 	<link href="<?= base_url('assets/templates/') ?>plugins/bower_components/chartist-js/dist/chartist.min.css" rel="stylesheet">
 	<link href="<?= base_url('assets/templates/') ?>plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
