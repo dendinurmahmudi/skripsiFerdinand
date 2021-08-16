@@ -15,6 +15,10 @@ class siswa_models extends CI_Model
 	{
 		return $this->db->query('select nama_mapel,nilai,grade,keterangan,sum(nilai)/count(nilai) as rata_rata from tbl_siswa join tbl_nilai on tbl_siswa.nis=tbl_nilai.nis join tbl_mata_pelajaran on tbl_nilai.id_mapel=tbl_mata_pelajaran.id_mapel where tbl_siswa.nis="'.$nis.'" and tbl_nilai.kls="'.$kls.'"')->row_array();
 	}
+	public function getmapel($kls,$jrsn,$dk)
+	{
+		return $this->db->query('select tbl_pegawai.nama, tbl_mata_pelajaran.nama_mapel from tbl_pelajaran join tbl_pegawai on tbl_pelajaran.nip=tbl_pegawai.nip join tbl_mata_pelajaran on tbl_pelajaran.id_mapel=tbl_mata_pelajaran.id_mapel where kelas="'.$kls.'" and jurusan="'.$jrsn.'" and detail_kelas="'.$dk.'"')->result_array();
+	}
 	public function grade($nilai)
 	{
 		
@@ -47,7 +51,7 @@ class siswa_models extends CI_Model
 		}elseif ($nilai >=90 && $nilai <=94.9) {
 			$ket = 'Sangat Kompeten';
 		}elseif ($nilai >=85 && $nilai <=89.9) {
-			$ket = 'Sanagat Kompeten';
+			$ket = 'Sangat Kompeten';
 		}elseif ($nilai >=80 && $nilai <=84.9) {
 			$ket = 'Kompeten';
 		}elseif ($nilai >=75 && $nilai <=79.9) {

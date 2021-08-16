@@ -32,8 +32,8 @@
 <script src="<?= base_url('assets/templates/') ?>plugins/bower_components/datatables/jquery.dataTables.min.js"></script>
 <!-- morris -->
 <script src="<?= base_url('assets/templates/') ?>plugins/bower_components/raphael/raphael-min.js"></script>
-    <script src="<?= base_url('assets/templates/') ?>plugins/bower_components/morrisjs/morris.js"></script>
-    <script src="<?= base_url('assets/templates/') ?>js/morris-data.js"></script>
+<script src="<?= base_url('assets/templates/') ?>plugins/bower_components/morrisjs/morris.js"></script>
+<script src="<?= base_url('assets/templates/') ?>js/morris-data.js"></script>
 <!-- start - This is for export functionality only -->
 <script src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>
@@ -90,49 +90,56 @@
 		]
 	});
 
-	Morris.Area({
-        element: 'morris-area-charto',
-        data:
-        <?php echo "[{
-            period: '10',
-            Ratarata: ";
-            if ($rata210['rata_rata'] == null) {
-            	echo "0";
-            }else{
-            	echo $rata210['rata_rata'];
-            }
-            echo "}, {
-            period: '11',
-            Ratarata: ";
-            if ($rata211['rata_rata'] == null) {
-            	echo "0";
-            }else{
-            	echo $rata211['rata_rata'];
-            }
-            echo "},{
-            period: '12',
-            Ratarata: ";
-            if ($rata212['rata_rata'] == null) {
-            	echo "0";
-            }else{
-            	echo $rata212['rata_rata'];
-            }
-            echo "}],";?>
-        xkey: 'period',
-        ykeys: ['Ratarata'],
-        labels: ['Rata-rata'],
-        pointSize: 3,
-        fillOpacity: 0,
-        pointStrokeColors:['#00bfc7'],
-        behaveLikeLine: true,
-        gridLineColor: '#e0e0e0',
-        lineWidth: 1,
-        hideHover: 'auto',
-        lineColors: ['#00bfc7'],
-        resize: true
-        
-    });
+</script>
+<script>
+	$(document).ready(function() {
+		var grafik = document.getElementById('grafik');
 
+		if (grafik) {
+			Morris.Area({
+				element: 'morris-area-charto',
+				data:
+				<?php echo "[{
+					period: '10',
+					Ratarata: ";
+					if ($rata210['rata_rata'] == null) {
+						echo "0";
+					}else{
+						echo $rata210['rata_rata'];
+					}
+					echo "}, {
+						period: '11',
+						Ratarata: ";
+						if ($rata211['rata_rata'] == null) {
+							echo "0";
+						}else{
+							echo $rata211['rata_rata'];
+						}
+						echo "},{
+							period: '12',
+							Ratarata: ";
+							if ($rata212['rata_rata'] == null) {
+								echo "0";
+							}else{
+								echo $rata212['rata_rata'];
+							}
+							echo "}],";?>
+							xkey: 'period',
+							ykeys: ['Ratarata'],
+							labels: ['Rata-rata'],
+							pointSize: 3,
+							fillOpacity: 0,
+							pointStrokeColors:['#00bfc7'],
+							behaveLikeLine: true,
+							gridLineColor: '#e0e0e0',
+							lineWidth: 1,
+							hideHover: 'auto',
+							lineColors: ['#00bfc7'],
+							resize: true
+							
+						});
+		}
+	});
 </script>
 </body>
 

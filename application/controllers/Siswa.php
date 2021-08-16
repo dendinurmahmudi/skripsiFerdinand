@@ -85,5 +85,38 @@ class Siswa extends CI_Controller
 			$this->load->view('templates/footer',$data);
 		}
 	}
+	public function datamapel()
+	{
+		$data['siswa'] = $this->db->get_where('tbl_siswa', ['nis'=>
+			$this->session->userdata('id')])->row_array();
+		if($this->session->userdata('id') != null){
+			$id = $data['siswa']['nis'];
+			$nama = $data['siswa']['nama'];
+			$email = $data['siswa']['email'];
+			$foto = $data['siswa']['foto'];
+		}
+		else{
+			$nama = 'default';
+			$email = 'email@mail.com';
+			$id ='0';
+			$foto = 'default.png';
+		}
+		if($this->session->userdata('id') == null){
+			$this->session->set_flashdata('pesan','<div class="alert alert-danger" role="alert">Anda harus masuk terlebih dulu!</div');
+			redirect('auth');
+		}else{
+			$data['nama'] = $nama;
+			$data['id'] = $id;
+			$data['foto'] = $foto;
+			$data['email'] = $email;
+			$data['judul'] = 'Data Mapel';
+			$kls = $this->db->query('select * from tbl_siswa where nis="'.$id.'"')->row_array();
+			$data['datamapel'] = $this->siswa_models->getmapel($kls['kelas'],$kls['jurusan'],$kls['detail_kelas']);
+			$this->load->view('templates/header',$data);
+			$this->load->view('siswa/sidebar',$data);
+			$this->load->view('siswa/datamapel',$data);
+			$this->load->view('templates/footer',$data);
+		}
+	}
 }
 ?>

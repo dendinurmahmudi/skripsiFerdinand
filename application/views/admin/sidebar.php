@@ -6,8 +6,8 @@
 			<ul class="nav" id="side-menu">
 				<li> <a href="/admin" class="waves-effect m-l-10"><i class="fa fa-dashboard fa-fw" data-icon="v"></i> Dashboard</a> </li>
 				<li> <a href="<?= base_url('Admin/index') ?>" class="m-l-10 m-t-10"><i class="fa fa-dashboard fa-fw" data-icon="v"></i> Beranda</a> </li>
-				<li> <a href="<?= base_url('Admin/datajurusan') ?>" class="m-l-10"><i class="fa fa-dashboard fa-fw" data-icon="v"></i> Data Jurusan</a> </li>
-				<li> <a href="<?= base_url('Admin/datamapel') ?>" class="m-l-10"><i class="fa fa-dashboard fa-fw" data-icon="v"></i> Data Mapel</a> </li>
+				<li> <a href="<?= base_url('Admin/datajurusan') ?>" class="m-l-10"><i class="fa fa-arrows fa-fw" data-icon="v"></i> Data Jurusan</a> </li>
+				<li> <a href="<?= base_url('Admin/datamapel') ?>" class="m-l-10"><i class="fa fa-clipboard fa-fw" data-icon="v"></i> Data Mapel</a> </li>
 				<li><a href="#" class="m-l-10 m-t-10"><i class="fa fa-group fa-fw" data-icon="v"></i> <span class="hide-menu"> Data Siswa <span class="fa arrow"></span> <span class="label label-rouded label-inverse pull-right">5</span></span></a>
 
 					<ul class="nav nav-second-level" aria-expanded="true">
@@ -33,8 +33,8 @@
 						</li>
 					</ul>
 				</li>
-				<li> <a href="<?= base_url('Admin/datapegawai') ?>" class="m-l-10"><i class="fa fa-dashboard fa-fw" data-icon="v"></i> Data Pegawai</a> </li>
-				<li> <a href="<?= base_url('Auth/logout') ?>" class="m-l-10"><i class="fa fa-dashboard fa-fw" data-icon="v"></i> Logout</a> </li>
+				<li> <a href="<?= base_url('Admin/datapegawai') ?>" class="m-l-10"><i class="fa fa-user fa-fw" data-icon="v"></i> Data Pegawai</a> </li>
+				<li> <a href="<?= base_url('Auth/logout') ?>" class="m-l-10"><i class="fa fa-sign-out fa-fw" data-icon="v"></i> Logout</a> </li>
 			</ul>
 		</div>
 	</div>

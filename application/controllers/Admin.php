@@ -671,6 +671,39 @@ class Admin extends CI_Controller
 			$this->load->view('templates/footer',$data);
 		}
 	}
+	public function datasiswalulus($jrsn,$thn)
+	{
+		$data['guru'] = $this->db->get_where('tbl_pegawai', ['nip'=>
+			$this->session->userdata('id')])->row_array();
+		if($this->session->userdata('id') != null){
+			$id = $data['guru']['nip'];
+			$nama = $data['guru']['nama'];
+			$email = $data['guru']['email'];
+			$foto = $data['guru']['foto'];
+		}
+		else{
+			$id = 'default';
+			$email = 'email@mail.com';
+			$no_induk ='0';
+			$foto = 'default.png';
+		}
+		if($this->session->userdata('id') == null){
+			$this->session->set_flashdata('pesan','<div class="alert alert-danger" role="alert">Anda harus masuk terlebih dulu!</div');
+			redirect('auth');
+		}else{
+			$data['nama'] = $nama;
+			$data['email'] = $email;
+			$data['id'] = $id;
+			$data['foto'] = $foto;
+			$kdjrsn = $this->admin_models->getkdjurusan($jrsn);
+			$data['datalulusan'] = $this->admin_models->getlulusan($jrsn,$thn);
+			$data['judul'] = 'Data Alumni Jurusan '.$kdjrsn['kd_jurusan'].' Tahun '.$thn;
+			$this->load->view('templates/header',$data);
+			$this->load->view('admin/sidebar',$data);
+			$this->load->view('admin/datalulusan',$data);
+			$this->load->view('templates/footer',$data);
+		}		
+	}
 
 }
 ?>

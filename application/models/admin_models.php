@@ -87,6 +87,10 @@ class admin_models extends CI_Model
 	public function getdetkelas($nis){
 		return $this->db->query('select * from tbl_siswa join tbl_jurusan on tbl_siswa.jurusan=tbl_jurusan.id_jurusan where nis="'.$nis.'"')->row_array();
 	}
+	public function getlulusan($jrsn,$thn)
+	{
+		return $this->db->query('select * from tbl_siswa join tbl_jurusan on tbl_siswa.jurusan=tbl_jurusan.id_jurusan where ket_lulus="'.$thn.'" and jurusan="'.$jrsn.'"')->result_array();
+	}
 	public function grade($nilai)
 	{
 		
@@ -119,7 +123,7 @@ class admin_models extends CI_Model
 		}elseif ($nilai >=90 && $nilai <=94.9) {
 			$ket = 'Sangat Kompeten';
 		}elseif ($nilai >=85 && $nilai <=89.9) {
-			$ket = 'Sanagat Kompeten';
+			$ket = 'Sangat Kompeten';
 		}elseif ($nilai >=80 && $nilai <=84.9) {
 			$ket = 'Kompeten';
 		}elseif ($nilai >=75 && $nilai <=79.9) {

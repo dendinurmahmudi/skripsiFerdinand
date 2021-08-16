@@ -57,7 +57,7 @@
 			<div class="navbar-header">
 				<div class="top-left-part">
 					<!-- Logo -->
-					<a class="logo" href="index.html">
+					<a class="logo" href="#">
 						<!-- Logo icon image, you can use font-icon also --><b>
 							<!--This is dark logo icon--><img src="<?= base_url('assets/templates/') ?>plugins/images/admin-logo.png" alt="home" class="dark-logo" /><!--This is light logo icon--><img src="<?= base_url('assets/templates/') ?>plugins/images/admin-logo-dark.png" alt="home" class="light-logo" />
 						</b>
@@ -122,12 +122,9 @@
 															<div class="u-img"><img src="<?= base_url('assets/data_file/foto_profile/'.$foto) ?>" alt="user" /></div>
 															<div class="u-text">
 																<h4><?= $nama ?></h4>
-																<p class="text-muted"><?= $email ?></p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a></div>
+																<p class="text-muted"><?= $email ?></p><a href="#" class="btn btn-rounded btn-danger btn-sm">Ganti Password</a></div>
 															</div>
 														</li>
-														<li role="separator" class="divider"></li>
-														<li><a href="#"><i class="ti-user"></i> My Profile</a></li>
-														<li><a href="#"><i class="fa fa-power-off"></i> Logout</a></li>
 													</ul>
 													<!-- /.dropdown-user -->
 												</li>
