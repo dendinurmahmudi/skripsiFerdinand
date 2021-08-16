@@ -109,8 +109,8 @@ class Siswa extends CI_Controller
 			$data['id'] = $id;
 			$data['foto'] = $foto;
 			$data['email'] = $email;
-			$data['judul'] = 'Data Mapel';
-			$kls = $this->db->query('select * from tbl_siswa where nis="'.$id.'"')->row_array();
+			$kls = $this->db->query('select * from tbl_siswa join tbl_jurusan on tbl_siswa.jurusan=tbl_jurusan.id_jurusan where nis="'.$id.'"')->row_array();
+			$data['judul'] = 'Data Mapel kelas '.$kls['kelas'].' '.$kls['kd_jurusan'].' '.$kls['detail_kelas'];
 			$data['datamapel'] = $this->siswa_models->getmapel($kls['kelas'],$kls['jurusan'],$kls['detail_kelas']);
 			$this->load->view('templates/header',$data);
 			$this->load->view('siswa/sidebar',$data);
