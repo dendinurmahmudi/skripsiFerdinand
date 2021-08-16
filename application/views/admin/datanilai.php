@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="col-sm-12">
 		<div class="white-box">
-			<p class="text-muted m-b-30">Nilai <?= $nama ?> kelas <?= $kelas['kelas'].' '.$kelas['kd_jurusan'].' '.$kelas['detail_kelas'] ?></p>
+			<p class="text-muted m-b-30">Nilai <?= $kelas['nama'] ?> kelas <?= $kelas['kelas'].' '.$kelas['kd_jurusan'].' '.$kelas['detail_kelas'] ?></p>
 			<ul class="nav customtab nav-tabs" role="tablist">
 				<li role="presentation" class="active"><a href="#b" aria-controls="profile" role="tab" data-toggle="tab" aria-expanded="false"><span class="visible-xs"><i class="ti-user"></i></span> <span class="hidden-xs">Nilai kelas 10</span></a></li>
 				<li role="presentation" class=""><a href="#c" aria-controls="profile" role="tab" data-toggle="tab" aria-expanded="false"><span class="visible-xs"><i class="ti-user"></i></span> <span class="hidden-xs">Nilai kelas 11</span></a></li>

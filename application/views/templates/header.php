@@ -61,9 +61,9 @@
 						<!-- Logo icon image, you can use font-icon also --><b>
 							<!--This is dark logo icon--><img src="<?= base_url('assets/templates/') ?>plugins/images/admin-logo.png" alt="home" class="dark-logo" /><!--This is light logo icon--><img src="<?= base_url('assets/templates/') ?>plugins/images/admin-logo-dark.png" alt="home" class="light-logo" />
 						</b>
-						 <span class="hidden-xs">
-                        <h4 class="dark-logo">SMK P Teknologi</h4>
-                        <h4 alt="home" class="light-logo">SMK P Teknologi</h4>
+						<span class="hidden-xs">
+							<h4 class="dark-logo">SMK P Teknologi</h4>
+							<h4 alt="home" class="light-logo">SMK P Teknologi</h4>
 						</span> </a>
 						
 					</div>
@@ -122,7 +122,7 @@
 															<div class="u-img"><img src="<?= base_url('assets/data_file/foto_profile/'.$foto) ?>" alt="user" /></div>
 															<div class="u-text">
 																<h4><?= $nama ?></h4>
-																<p class="text-muted"><?= $email ?></p><a href="#" class="btn btn-rounded btn-danger btn-sm">Ganti Password</a></div>
+																<p class="text-muted"><?= $email ?></p><a href="<?= base_url('Auth/viewgantipass/'.$nama.'/'.$id) ?>" title="Ganti Password"class="btn btn-rounded btn-danger btn-sm">Ganti Password</a></div>
 															</div>
 														</li>
 													</ul>
@@ -135,3 +135,4 @@
 										<!-- /.navbar-top-links -->
 										<!-- /.navbar-static-side -->
 									</nav>
+									

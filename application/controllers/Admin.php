@@ -247,7 +247,7 @@ class Admin extends CI_Controller
 			</div');
 		redirect('Admin/datasiswa/'.$jurusan.'/'.$kelas.'/'.$detail_kelas);
 	}
-	public function hapussiswa($nis,$jrsn){
+	public function hapussiswa($nis,$jrsn,$kls,$dk){
 		$this->db->where('nis',$nis);
 		$this->db->delete('tbl_siswa');
 		$this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">
@@ -256,7 +256,7 @@ class Admin extends CI_Controller
 			<span aria-hidden="true">&times;</span>
 			</button>
 			</div');
-		redirect('Admin/datasiswa/'.$jurusan.'/'.$kelas.'/'.$detail_kelas);
+		redirect('Admin/datasiswa/'.$jrsn.'/'.$kls.'/'.$dk);
 	}
 	public function datakelas($kls) {
 		$data['guru'] = $this->db->get_where('tbl_pegawai', ['nip'=>

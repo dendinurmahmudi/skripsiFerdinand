@@ -90,6 +90,42 @@ class Auth extends CI_Controller
 			Anda Berhasil Logout</div>');
 		redirect('auth');
 	}
+	public function viewgantipass($nama,$id)
+	{
+		$data['id'] = $id;
+		$data['nama'] = $nama;
+		$this->load->view('auth/gantipassword',$data);
+	}
+	public function gantipassword()
+	{
+		$this->form_validation->set_rules('password1', 'Password', 'required|trim|min_length[6]|matches[password2]', [
+			'matches' => 'Pengulangan password tidak sama!',
+			'min_length' => 'Minimal password terdiri dari 6 karakter!',
+			'required' => 'Password tidak boleh kosong'
+		]);
+		$this->form_validation->set_rules('password2', 'Password', 'required|trim|matches[password1]');
+
+		if ($this->form_validation->run() == false) {
+			$this->viewgantipass($_POST['nama'],$_POST['id']);
+		} else {
+			$guru = $this->db->get_where('tbl_pegawai',['nip'=>$_POST['id']])->row_array();
+			$siswa = $this->db->get_where('tbl_siswa',['nis'=>$_POST['id']])->row_array();
+			if ($guru) {
+				$this->db->set('Password', $_POST['password1']);
+				$this->db->where('nip',$guru['nip']);
+				$this->db->update('tbl_pegawai');
+			}else if ($siswa) {	
+				$this->db->set('Password', $_POST['password1']);
+				$this->db->where('nis',$siswa['nis']);
+				$this->db->update('tbl_siswa');
+			}
+			$this->session->unset_userdata('id');
+			$this->session->unset_userdata('nama');
+			$this->session->set_flashdata('pesan', '<div class=" alert alert-success" role="alert">
+				Berhasil, Silahkan login menggunakan password baru</div>');
+			redirect('auth');
+		}
+	}
 
 }
 
