@@ -26,7 +26,7 @@
 								<td><?= $no++ ?></td>
 								<td><?= $s['nis'] ?></td>
 								<td><?= $s['nama'] ?></td>
-								<td><?= $s['ttl'] ?></td>
+								<td><?= $s['tlahir'].', '.$s['ttl'] ?></td>
 								<td><?= $s['email'] ?></td>
 								<td><?= $s['kelas'].' '.$s['kd_jurusan'].' '.$s['detail_kelas'] ?></td>
 								<td class="text-nowrap">
@@ -58,12 +58,16 @@
 										<label for="nama">Nama :</label>
 										<input type="text" class="form-control" id="nama" name="nama" value="<?= $s['nama'] ?>" >
 									</div>
-									<div class="form-group col-sm-12">
-										<label class="m-t-5" for="email">Tempat Tgl Lahir :</label>
-										<input type="text" class="form-control" id="email" name="ttl" value="<?= $s['ttl'] ?>">
+									<div class="form-group col-sm-6">
+										<label class="m-t-5">Tempat Lahir :</label>
+										<input type="text" class="form-control" id="email" name="tlahir" value="<?= $s['tlahir'] ?>">
+									</div>
+									<div class="form-group col-sm-6">
+										<label class="m-t-5">Tanggal Lahir :</label>
+										<input type="date" class="form-control" id="email" name="ttl" value="<?= $s['ttl'] ?>">
 									</div>
 									<div class="form-group col-sm-12">
-										<label class="m-t-5" for="email">Email :</label>
+										<label class="m-t-5">Email :</label>
 										<input type="text" class="form-control" id="email" name="email" value="<?= $s['email'] ?>">
 									</div>
 									<div class="form-group col-sm-4">

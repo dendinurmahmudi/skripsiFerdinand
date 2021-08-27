@@ -4,7 +4,7 @@
 		<div>			
 			<?= $this->session->flashdata('pesan'); ?>
 		</div>
-		<a href="#" data-toggle="modal" class="btn btn-info m-b-30" data-target="#tambahguru" title="Tambah data Alumni"><i class="fa fa-plus-circle"></i> Tambah Pegawai</a>
+		<a href="#" data-toggle="modal" class="btn btn-info m-b-30" data-target="#tambahguru" title="Tambah data Pegawai"><i class="fa fa-plus-circle"></i> Tambah Pegawai</a>
 		<div class="white-box">
 			<p class="text-muted m-b-30">Excel, PDF & Print</p>
 			<div class="table-responsive">

@@ -212,6 +212,7 @@ class Admin extends CI_Controller
 				'jurusan' => $this->input->post('jurusan',true),
 				'password' => $this->input->post('nis',true),
 				'ttl' => $this->input->post('ttl',true),
+				'tlahir' => $this->input->post('tlahir',true),
 				'detail_kelas' => $this->input->post('detailkelas',true),
 				'ket_lulus' => "Belum lulus",
 				'foto' => 'default.png'
@@ -236,6 +237,7 @@ class Admin extends CI_Controller
 		$this->db->set('jurusan',$jurusan);
 		$this->db->set('kelas',$kelas);
 		$this->db->set('ttl',$this->input->post('ttl',true));
+		$this->db->set('tlahir',$this->input->post('tlahir',true));
 		$this->db->set('detail_kelas',$detail_kelas);
 		$this->db->where('nis',$this->input->post('nis',true));
 		$this->db->update('tbl_siswa');

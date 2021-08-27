@@ -20,11 +20,13 @@
 										<th rowspan="2" class="text-center">No</th>
 										<th rowspan="2" class="text-center">Nama Pelajaran</th>
 										<th colspan="3" class="text-center">Nilai</th>
+										<th>Catatan</th>
 									</tr>
 									<tr>
 										<th>Satuan</th>
 										<th>Grade</th>
 										<th>Keterangan</th>
+										<th></th>
 									</tr>
 								</thead>
 								<tbody>
@@ -38,6 +40,7 @@
 											<td><?= $s['nilai'] ?></td>
 											<td><?= $s['grade'] ?></td>
 											<td><?= $s['keterangan'] ?></td>
+											<td title="<?= $s['catatan'] ?>"><?= $s['catatan'] ?></td>
 										</tr>
 										<?php $n++;} ?>
 									</tbody>
@@ -68,11 +71,13 @@
 											<th rowspan="2" class="text-center">No</th>
 											<th rowspan="2" class="text-center">Nama Pelajaran</th>
 											<th colspan="3" class="text-center">Nilai</th>
+											<th>Catatan</th>
 										</tr>
 										<tr>
 											<th>Satuan</th>
 											<th>Grade</th>
 											<th>Keterangan</th>
+											<th></th>
 										</tr>
 									</thead>
 									<tbody>
@@ -86,6 +91,7 @@
 												<td><?= $s['nilai'] ?></td>
 												<td><?= $s['grade'] ?></td>
 												<td><?= $s['keterangan'] ?></td>
+												<td title="<?= $s['catatan'] ?>"><?= $s['catatan'] ?></td>
 											</tr>
 											<?php $n++;} ?>
 										</tbody>
@@ -116,11 +122,13 @@
 												<th rowspan="2" class="text-center">No</th>
 												<th rowspan="2" class="text-center">Nama Pelajaran</th>
 												<th colspan="3" class="text-center">Nilai</th>
+												<th>Catatan</th>
 											</tr>
 											<tr>
 												<th>Satuan</th>
 												<th>Grade</th>
 												<th>Keterangan</th>
+												<th></th>
 											</tr>
 										</thead>
 										<tbody>
@@ -134,6 +142,7 @@
 													<td><?= $s['nilai'] ?></td>
 													<td><?= $s['grade'] ?></td>
 													<td><?= $s['keterangan'] ?></td>
+													<td title="<?= $s['catatan'] ?>"><?= $s['catatan'] ?></td>
 												</tr>
 												<?php $n++;} ?>
 											</tbody>

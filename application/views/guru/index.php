@@ -1,43 +1,18 @@
 <div class="row">
 	<div class="col-sm-12">
-		<div class="row">
-			<div class="col-sm-3">
-				<div class="white-box">
-					<h3 class="box-title">NEW CLIENTS</h3>
-					<ul class="list-inline m-t-30 p-t-10 two-part">
-						<li><i class="icon-people text-info"></i></li>
-						<li class="text-right"><span class="counter">23</span></li>
-					</ul>
+		<?= $this->session->flashdata('pesan'); ?>
+
+		<?php foreach ($datakelas as $j) { ?>
+			<a href="<?= base_url('Guru/datasiswa/'.$j['kelas'].'/'.$j['id_jurusan'].'/'.$j['detail_kelas']) ?>">
+				<div class="col-sm-3">
+					<div class="white-box">
+						<h3 class="box-title"><?= $j['kelas'].' '.$j['kd_jurusan'].' '.$j['detail_kelas'] ?></h3>
+						<ul class="list-inline m-t-30 p-t-10 two-part">
+							<li><i class="icon-people text-info"></i></li>
+						</ul>
+					</div>
 				</div>
-			</div>
-			<div class="col-sm-3">
-				<div class="white-box">
-					<h3 class="box-title">NEW Projects</h3>
-					<ul class="list-inline m-t-30 p-t-10 two-part">
-						<li><i class="icon-folder text-purple"></i></li>
-						<li class="text-right"><span class="counter">169</span></li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-sm-3">
-				<div class="white-box">
-					<h3 class="box-title">Open Projects</h3>
-					<ul class="list-inline m-t-30 p-t-10 two-part">
-						<li><i class="icon-folder-alt text-danger"></i></li>
-						<li class="text-right"><span class="">311</span></li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-sm-3">
-				<div class="white-box">
-					<h3 class="box-title">NEW Invoices</h3>
-					<ul class="list-inline m-t-30 p-t-10 two-part">
-						<li><i class="ti-wallet text-success"></i></li>
-						<li class="text-right"><span class="">117</span></li>
-					</ul>
-				</div>
-			</div>
-		</div>
+			</a>
+		<?php } ?>
 	</div>
 </div>
-<a href="<?= base_url('Guru/nil/90') ?>" title="">lodoms</a>

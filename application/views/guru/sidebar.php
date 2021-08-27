@@ -5,7 +5,7 @@
 			<ul class="nav" id="side-menu">
 				<li> <a href="/admin" class="waves-effect m-l-10"><i class="fa fa-dashboard fa-fw" data-icon="v"></i> Dashboard</a> </li>
 				<li> <a href="<?= base_url('Guru/index') ?>" class="m-l-10 m-t-10"><i class="fa fa-dashboard fa-fw" data-icon="v"></i> Beranda</a> </li>
-				<li> <a href="<?= base_url('Guru/datakelas') ?>" class="m-l-10"><i class="fa fa-star fa-fw" data-icon="v"></i> Data Nilai</a> </li>
+				<!-- <li> <a href="<?= base_url('Guru/datakelas') ?>" class="m-l-10"><i class="fa fa-star fa-fw" data-icon="v"></i> Data Nilai</a> </li> -->
 				<li> <a href="<?= base_url('Auth/logout') ?>" class="m-l-10"><i class="fa fa-sign-out fa-fw" data-icon="v"></i> Logout</a> </li>
 			</ul>
 		</div>

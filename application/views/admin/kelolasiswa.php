@@ -24,9 +24,14 @@
 								<input type="text" name="namalengkap" class="form-control" placeholder="Nama Lengkap" required value="<?= set_value('namalengkap'); ?>">
 								<?= form_error('namalengkap', '<small class="text-danger pl-3">', '</small>'); ?>
 							</div>
-							<div class="form-group col-sm-12">
-								<label for="namalengkap">Tempat Tgl Lahir</label>
-								<input type="text" name="ttl" class="form-control" placeholder="Tempat Tgl Lahir" required value="<?= set_value('ttl'); ?>">
+							<div class="form-group col-sm-6">
+								<label for="namalengkap">Tempat Lahir</label>
+								<input type="text" name="tlahir" class="form-control" placeholder="Tempat Lahir" required value="<?= set_value('tlahir'); ?>">
+								<?= form_error('tlahir', '<small class="text-danger pl-3">', '</small>'); ?>
+							</div>
+							<div class="form-group col-sm-6">
+								<label for="namalengkap">Tanggal Lahir</label>
+								<input type="date" name="ttl" value="<?= set_value('ttl'); ?>" class="form-control" required >
 								<?= form_error('ttl', '<small class="text-danger pl-3">', '</small>'); ?>
 							</div>
 							<div class="form-group col-sm-12">

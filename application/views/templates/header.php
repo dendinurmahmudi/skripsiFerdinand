@@ -62,8 +62,8 @@
 							<!--This is dark logo icon--><img src="<?= base_url('assets/templates/') ?>plugins/images/admin-logo.png" alt="home" class="dark-logo" /><!--This is light logo icon--><img src="<?= base_url('assets/templates/') ?>plugins/images/admin-logo-dark.png" alt="home" class="light-logo" />
 						</b>
 						<span class="hidden-xs">
-							<h4 class="dark-logo">SMK P Teknologi</h4>
-							<h4 alt="home" class="light-logo">SMK P Teknologi</h4>
+								<h4 class="dark-logo"><marquee scrolldelay="200">SMK P Teknologi</marquee></h4>
+							<h4 alt="home" class="light-logo"><marquee scrolldelay="200">SMK P Teknologi</marquee></h4>
 						</span> </a>
 						
 					</div>

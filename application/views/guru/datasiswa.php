@@ -7,6 +7,9 @@
 		width: 40px;
 		background-color: transparent;
 	}
+	input.input1{
+		width: 100px;
+	}
 </style>
 <div class="row">
 	<div class="col-sm-12">
@@ -22,6 +25,7 @@
 							<tr>
 								<th colspan="6" class="text-center">Data kelas <?= $kelas['kelas'].' '.$kelas['kd_jurusan'].' '.$kelas['detail_kelas'] ?></th>
 								<th colspan="3" class="text-center">Nilai</th>
+								<th>Catatan</th>
 							</tr>
 							<tr>
 								<th>No</th>
@@ -33,6 +37,7 @@
 								<th>Satuan</th>
 								<th>Grade</th>
 								<th>Keterangan</th>
+								<th></th>
 							</tr>
 						</thead>
 						<tbody>
@@ -67,6 +72,13 @@
 										<?php }else{
 											echo $s['keterangan'];
 										} ?>	
+									</td>
+									<td>
+										<?php if($nilai==null){ ?>
+											<input type="text" class="input input1" id="catatan" <?= 'name="catatan['.$n.']" '?> value="" placeholder="catatan" title="Catatan">
+										<?php }else{ ?>	
+											<input type="text" class="input input1" id="catatan" <?= 'name="catatan['.$n.']" '?> value="<?= $s['catatan'] ?>" placeholder="catatan" title="<?= $s['catatan'] ?>">
+										<?php } ?>	
 									</td>
 								</tr>
 								<input type="hidden" <?= 'name="nis['.$n.']" '?> value="<?= $s['nis'] ?>">

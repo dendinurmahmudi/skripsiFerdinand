@@ -100,7 +100,7 @@
 				element: 'morris-area-charto',
 				data:
 				<?php echo "[{
-					period: '10',
+					kelas: '10',
 					Ratarata: ";
 					if ($rata210['rata_rata'] == null) {
 						echo "0";
@@ -108,7 +108,7 @@
 						echo $rata210['rata_rata'];
 					}
 					echo "}, {
-						period: '11',
+						kelas: '11',
 						Ratarata: ";
 						if ($rata211['rata_rata'] == null) {
 							echo "0";
@@ -116,7 +116,7 @@
 							echo $rata211['rata_rata'];
 						}
 						echo "},{
-							period: '12',
+							kelas: '12',
 							Ratarata: ";
 							if ($rata212['rata_rata'] == null) {
 								echo "0";
@@ -124,7 +124,7 @@
 								echo $rata212['rata_rata'];
 							}
 							echo "}],";?>
-							xkey: 'period',
+							xkey: 'kelas',
 							ykeys: ['Ratarata'],
 							labels: ['Rata-rata'],
 							pointSize: 3,

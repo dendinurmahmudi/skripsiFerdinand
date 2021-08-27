@@ -52,7 +52,7 @@ class Auth extends CI_Controller
 			}
 			else{
 				$this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">
-					Password salahin!
+					Password salah!
 					</div');
 				redirect('auth');
 			}
@@ -68,7 +68,7 @@ class Auth extends CI_Controller
 			}
 			else{
 				$this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">
-					Password salahun!
+					Password salah!
 					</div');
 				redirect('auth');
 			}
